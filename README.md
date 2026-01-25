@@ -42,9 +42,9 @@ The results are as follows:
 - N = 1800 → 611.1124434200001 seconds
 
 #### Using Time Command for N=1024
--real    1m44.383s
--user    1m41.775s
--sys     0m0.027s
+- real    1m44.383s
+- user    1m41.775s
+- sys     0m0.027s
 
 **Observations:**
 - Python is significantly slower due to interpreter overhead, dynamic typing, and lack of vectorization.
@@ -75,7 +75,12 @@ The results are as follows:
 Execution Time taken: NumPy (built-in matrix multiplication) --->
 - N = 1024 → 0.397075891 seconds  
 - N = 1500 → 1.493048 seconds  
-- N = 1800 → 2.694342613220215 seconds  
+- N = 1800 → 2.694342613220215 seconds
+
+#### Using Time Command for N=1024
+- real    0m1.953s
+- user    0m0.503s
+- sys     0m0.018s
 
 **Observations:**
 - NumPy is dramatically faster than Python loops and even faster than naïve C.
@@ -98,9 +103,9 @@ Execution Time taken:
 
 #### Using Time Command for N=1024
 
--real    0m2.575s
--user    0m0.846s
--sys     0m0.010s
+- real    0m2.575s
+- user    0m0.846s
+- sys     0m0.010s
 
 #### -O3 (best) --->
 - N = 1024 → 0.845917 seconds  
@@ -110,9 +115,9 @@ Execution Time taken:
 
 #### Using Time Command for N=1024
 
--real    0m2.608s
--user    0m0.835s
--sys     0m0.012s
+- real    0m2.608s
+- user    0m0.835s
+- sys     0m0.012s
 
 **Observations:**
 - -O2 and -O3 drastically reduce execution time.
@@ -139,15 +144,15 @@ Execution Time taken: MIPS --->
 
 #### Using Time Command for N=1024
 
--real    0m4.205s
--user    0m2.700s
--sys     0m0.014s
+- real    0m4.205s
+- user    0m2.700s
+- sys     0m0.014s
 
 #### Using default compilation flag for N=1024:-
 
--real    0m10.431s
--user    0m7.683s
--sys     0m0.013s
+- real    0m10.431s
+- user    0m7.683s
+- sys     0m0.013s
 
 **Observations:**
 - MIPS performance is slower than native x86 due to:
