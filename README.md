@@ -36,7 +36,7 @@
 Using the file `coa_py.py`, the computations were carried out with N = 1024, N = 1500, and N = 1800.  
 The results are as follows:
 
-#### Execution Time taken: Python (for loop) --->
+#### Execution Time taken using timeit module: Python (for loop) --->
 - N = 1024 → 100.42602109999996 seconds  
 - N = 1500 → 341.58655573400006 seconds  
 - N = 1800 → 611.1124434200001 seconds
@@ -59,7 +59,7 @@ The execution times of the C and Python programs show a drastic difference.
 **Key reasons:**
 - C is compiled into native machine code and benefits from optimized memory access and register usage.
 - Python executes loops via an interpreter, resulting in heavy overhead per iteration.
-- The `time` command measures total process runtime, while `clock_gettime()` (C) and `timeit` (Python) measure only the computation portion.
+- The `time` command measures total process runtime, while `timespec` (C) and `timeit` (Python) measure only the computation portion.
 
 **Conclusion:**
 - C outperforms Python by approximately 30×–200× for large matrix sizes.
@@ -94,12 +94,25 @@ Execution Time taken:
 #### -O2 (better than -O0) --->
 - N = 1024 → 0.850860 seconds  
 - N = 1500 → 3.178797 seconds  
-- N = 1800 → 6.087003 seconds  
+- N = 1800 → 6.087003 seconds
+
+#### Using Time Command for N=1024
+
+-real    0m2.575s
+-user    0m0.846s
+-sys     0m0.010s
 
 #### -O3 (best) --->
 - N = 1024 → 0.845917 seconds  
 - N = 1500 → 3.123928 seconds  
-- N = 1800 → 5.969561 seconds  
+- N = 1800 → 5.969561 seconds
+
+
+#### Using Time Command for N=1024
+
+-real    0m2.608s
+-user    0m0.835s
+-sys     0m0.012s
 
 **Observations:**
 - -O2 and -O3 drastically reduce execution time.
@@ -113,15 +126,28 @@ Execution Time taken:
 
 ---
 
-### B ###
+### Bonus I ###
 ### Ans ###
-Using MIPS and QEMU, the `demo.c` code was cross-compiled for MIPS 32-bit architecture.  
+Using MIPS and QEMU, the `demo.c` code was cross-compiled for MIPS 32-bit architecture and using -O2 compilation flag.  
 The results are as follows:
 
 Execution Time taken: MIPS --->
 - N = 1024 → 2.646777 seconds  
 - N = 1500 → 9.748211 seconds  
-- N = 1800 → 20.506701 seconds  
+- N = 1800 → 20.506701 seconds
+
+
+#### Using Time Command for N=1024
+
+-real    0m4.205s
+-user    0m2.700s
+-sys     0m0.014s
+
+#### Using default compilation flag for N=1024:-
+
+-real    0m10.431s
+-user    0m7.683s
+-sys     0m0.013s
 
 **Observations:**
 - MIPS performance is slower than native x86 due to:
