@@ -168,7 +168,7 @@ Execution Time taken: MIPS --->
 | C(O3)  | 7.55E+09    | 3.8E+09| 0.503 |
 | Python | 3.32E+12    | 7.85E+11| 0.236 |
 | Numpy  | 9.45E+09    | 2.63E+09 | 0.2787 |
-| MIPS   | 1,66E+11    | 5.386E+10| 0.324 |
+| MIPS   | 1.66E+11    | 5.386E+10| 0.324 |
 
 **Observations:**
 - Instruction count decreases with optimization.
