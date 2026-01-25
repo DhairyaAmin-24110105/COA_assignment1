@@ -179,7 +179,7 @@ Execution Time taken: MIPS --->
 - Instruction count decreases with optimization.
 - CPI decreases due to better instruction-level parallelism and cache behavior.
 - Optimized code shows reduced memory stalls.
-- O3 uses only performance cores whereas others use 
+- O3 uses only performance cores whereas others use both efficiency as well as performance cores.
 
 ---
 
