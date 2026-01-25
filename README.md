@@ -159,18 +159,22 @@ Execution Time taken: MIPS --->
 
 ## Bonus II — Instruction Count and CPI (perf)
 
+#### Using input N=1024 and `perf stat` command 
 
-
-| Version | Instructions | Cycles | CPI |
+| Program+Optimization flags| Instructions | Cycles | CPI |
 |--------|-------------|--------|-----|
-| O0     | X           | Y      | Y/X |
-| O2     | X           | Y      | Y/X |
-| O3     | X           | Y      | Y/X |
+| C(O0)  | 7.113E+10   | 2.45E+10| 0.344 |
+| C(O2)  | 8.54E+09    | 6.138E+09| 0.7187 |
+| C(O3)  | 7.55E+09    | 3.8E+09| 0.503 |
+| Python | 3.32E+12    | 7.85E+11| 0.236 |
+| Numpy  | 9.45E+09    | 2.63E+09 | 0.2787 |
+| MIPS   | 1,66E+11    | 5.386E+10| 0.324 |
 
 **Observations:**
 - Instruction count decreases with optimization.
 - CPI decreases due to better instruction-level parallelism and cache behavior.
 - Optimized code shows reduced memory stalls.
+- O3 uses only performance cores whereas others use 
 
 ---
 
