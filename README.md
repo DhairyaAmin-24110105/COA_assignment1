@@ -178,15 +178,6 @@ Execution Time taken: MIPS --->
 
 ---
 
-## Final Conclusions
-
-- C ≫ Python (nested loops)  
-- NumPy ≫ Python loops  
-- -O2/-O3 ≫ -O0  
-- Cross-compilation confirms architectural portability  
-- Compiler optimizations reduce instruction count and CPI  
-
----
 
 
 
